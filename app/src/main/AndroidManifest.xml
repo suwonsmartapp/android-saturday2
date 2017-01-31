@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.saturday2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ExampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".WebBrowserActivity" />
+        <activity android:name=".ThreadActivity" />
+        <activity android:name=".StopWatchActivity" />
+        <activity android:name=".ListViewExamActivity"></activity>
+        <activity
+            android:name=".CustomListViewActivity"
+            android:label="커스텀어댑터"></activity>
+        <activity android:name=".WeatherActivity">
+
+        </activity>
+        <activity android:name=".CursorAdapterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
