@@ -10,9 +10,6 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     public static final int PRICE_COFFEE = 3000;
@@ -121,27 +118,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         displayPrice();
     }
 
-    public static class MessageEvent {
-        // 필요에 의해 변수를 필드에 작성
-    }
-
-    @Subscribe
-    public void onMessageEvent(MessageEvent event) {
-
-
-        EventBus.getDefault().post(new MessageEvent());
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        EventBus.getDefault().register(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        EventBus.getDefault().unregister(this);
-    }
 }
